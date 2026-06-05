@@ -2,7 +2,7 @@
 
 A non-custodial collateralized lending protocol deployed on Ethereum Sepolia. Users deposit ETH as collateral to borrow ERC20 tokens, with on-chain liquidation logic and a React/TypeScript frontend.
 
-![Nexus Lend Frontend](demo.png)
+![Nexus Lend Frontend](DEMO.png)
 
 ![Test Suite — 6/6 passing, 256 fuzz runs](demo1.png)
 
