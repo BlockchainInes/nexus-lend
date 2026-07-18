@@ -28,7 +28,7 @@ The protocol is built around a single `NexusLendingPool` contract implementing a
 2. The protocol records the collateral position.
 3. The user borrows ERC20 tokens within the allowed collateral ratio.
 4. Interest accrues over time.
-5. The borrower may repay the loan and withdraw collateral.
+5. The borrower repays the loan and withdraws the collateral.
 6. Undercollateralized positions can be liquidated by third parties.
 
 ## Core Mechanics
@@ -88,7 +88,7 @@ forge script script/Counter.s.sol:DeployNexusLendingPool \
 
 ## Frontend
 
-Live demo: [nexus-lend-ui.vercel.app](#) *(coming soon)*
+Live demo: Coming soon: [nexus-lend-ui.vercel.app](#) 
 
 ```bash
 cd nexus-lend-ui
