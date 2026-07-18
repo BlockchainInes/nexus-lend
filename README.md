@@ -20,6 +20,15 @@ The protocol is built around a single `NexusLendingPool` contract implementing a
 **Frontend:** React · TypeScript · wagmi · viem · Vite  
 **Network:** Ethereum Sepolia Testnet
 
+## Protocol Flow
+
+1. User deposits ETH as collateral.
+2. The protocol records the collateral position.
+3. The user borrows ERC20 tokens within the allowed collateral ratio.
+4. Interest accrues over time.
+5. The borrower may repay the loan and withdraw collateral.
+6. Undercollateralized positions can be liquidated by third parties.
+
 ## Core Mechanics
 
 - ETH collateral deposit with per-address position tracking
