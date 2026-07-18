@@ -14,7 +14,7 @@ Decentralized lending protocols enable users to access liquidity without relying
 
 Nexus Lend demonstrates the core mechanics of collateralized on-chain lending, including collateral management, borrowing limits, interest accrual, repayment, and liquidation, while emphasizing secure smart contract design and transparent protocol logic.
 
-## Architecture
+## Technical Architecture
 
 The protocol is built around a single `NexusLendingPool` contract implementing a 150% collateralization ratio with automatic liquidation at 120%. Interest accrual is tracked per-position using block timestamps.
 
@@ -33,11 +33,12 @@ The protocol is built around a single `NexusLendingPool` contract implementing a
 
 ## Core Mechanics
 
-- ETH collateral deposit with per-address position tracking
-- ERC20 borrow against collateral with `COLLATERAL_RATIO` enforcement
-- Liquidation path for undercollateralized positions — callable by any address
-- `SafeERC20` transfers, `ReentrancyGuard` on all state-changing functions
-- Custom error types for gas-efficient reverts
+- ETH collateral deposits with per-address position tracking
+- ERC20 borrowing with 150% collateralization
+- Automatic liquidation below 120% collateral ratio
+- SafeERC20 token transfers
+- ReentrancyGuard protection
+- Custom Solidity errors for gas-efficient execution
 
 ## Deployment
 
@@ -45,7 +46,7 @@ The protocol is built around a single `NexusLendingPool` contract implementing a
 |---|---|---|
 | NexusLendingPool | Sepolia | [0x1e96DE8C083FE1C74d2e50a50fB696941F5d9b20](https://sepolia.etherscan.io/address/0x1e96de8c083fe1c74d2e50a50fb696941f5d9b20) |
 
-Source verified on Etherscan — Exact Match.
+Verified on Etherscan (Exact Match)
 
 ## Test Suite
 
@@ -100,7 +101,7 @@ npm run dev
 - Reentrancy protection on all external calls
 - Pull-over-push pattern for ETH transfers
 - Collateral locked until debt is fully repaid
-- No price oracle in current version — production deployment would integrate Chainlink Data Feeds
+- Current version uses a simplified collateral model. A production deployment would integrate Chainlink Data Feeds for decentralized price discovery.
 
 ## License
 
