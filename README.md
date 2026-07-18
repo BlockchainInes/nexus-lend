@@ -6,6 +6,12 @@ A non-custodial collateralized lending protocol deployed on Ethereum Sepolia. Us
 
 ![Test Suite — 6/6 passing, 256 fuzz runs](demo1.png)
 
+## Motivation
+
+Decentralized lending protocols enable users to access liquidity without relying on centralized financial institutions.
+
+Nexus Lend demonstrates the core mechanics of collateralized on-chain lending, including collateral management, borrowing limits, interest accrual, repayment, and liquidation, while emphasizing secure smart contract design and transparent protocol logic.
+
 ## Architecture
 
 The protocol is built around a single `NexusLendingPool` contract implementing a 150% collateralization ratio with automatic liquidation at 120%. Interest accrual is tracked per-position using block timestamps.
